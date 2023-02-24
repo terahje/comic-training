@@ -10,7 +10,7 @@ export default function Detail ({title, issueNumber, publishDate, creators}) {
             <h3 className={styles.title}>{title}</h3>
             <p className={styles.pTag}><strong>Issue: </strong>{issueNumber}</p>
             <p className={styles.pTag}><strong>Published: </strong><Moment format="MMMM DD, YYYY">{publishDate}</Moment></p>
-            <p className={styles.pTag}><strong>Creators: </strong>{creators.map(creator => creator.name.split(' ')[1]).join(', ')}</p>
+            <p className={styles.pTag}><strong>Creators: </strong>{creators.items.map(creator => creator.name.split(' ')[1]).join(', ')}</p>
         </div>
      );
 }

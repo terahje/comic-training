@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Comic from "./Comic";
 import HeroFilter from "./HeroFilter";
 import CreatorFilter from "./CreatorFilter";
-import comics from '../data/content.json';
+import { useMarvelAPI } from "../hooks/useMarvelAPI"
 import styles from '@/styles/Comic.module.css'
+import PacmanLoader from "react-spinners/PacmanLoader";
+
+
+const API_URL = 'http://gateway.marvel.com/v1/public/comics?ts=1&apikey=ff34e285bad35f7abc603c31db177f23&hash=17323b56c7cd1c765b981a2d95310893'
 
 const slides = {
     display: 'grid',
@@ -14,26 +18,31 @@ const slides = {
 
 export function ComicList() {
     const [filter, setFilter] = useState("")
-
-    useEffect(() =>{
-        
-    }, [])
+    const {comics, error, loading  } = useMarvelAPI(API_URL)
 
     return (
-        <div>
+        <>
             <div className="filter-cont">
                 <HeroFilter filter={filter} setFilter={setFilter}/>
                 <CreatorFilter filter={filter} setFilter={setFilter}/>
             </div>
+            
             <ul style={slides} >
-                {comics.filter((comic) => 
-                    comic.title.toLocaleLowerCase().includes(filter.toLowerCase())
-                ).map((comic) => 
-                    (
-                        <Comic key={comic.id} comic={comic}/>
-                    )
-                )}
+                { error && <div>Page Not Found!</div>}
+                {
+                    loading ?
+                        <PacmanLoader 
+                            color={"#C24868"}
+                            loading={loading}
+                            className={styles.loading}
+                            size={150}
+                            aria-label="Loading Spinner"
+                            data-testid="loader"
+                        />
+                    :
+                        (!comics)?<p>Not found</p>:<Comic comics={comics}/>
+                }
             </ul>
-        </div>
+        </>
     )
 }
