@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from '@/styles/Comic.module.css'
+import styles from '../styles/Comic.module.css'
 
 import {
   faBoltLightning,

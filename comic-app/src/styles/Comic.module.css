@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
-
 .contSection {
-    display: grid;
-    gap: 10px;
-
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
 }
 
 .comicSlide {
@@ -22,11 +20,11 @@
 }
 
 .title {
-    margin: 0;
+    margin: 0 0 5px;
     font-size: 1rem;
     font-weight: 700;
     line-height: calc(19/ 16);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-main);
 
 }
 
@@ -34,22 +32,30 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #222222;
+    background-color: #222222;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     bottom: 50%;
     left: -15px;
-    border: 2px solid #F8F8F2;
+    border: 2px solid #222222;
     transform: translateY(50%);
+    transition: background-color ease-in-out .3s, border ease-in-out .3s;
+}
+
+.button:hover {
+    background-color: #C24868;
+    border: 2px solid #F8F8F2;
 }
 
 .pTag {
     font-size: 16px;
-    font-family: 'Karla', sans-serif;
+    font-family: var(--font-display);
     margin: 0;
 }
+
+/* Loading */
 
 .loading {
     margin: 30vh auto 0;
@@ -57,6 +63,81 @@
     align-items: center;
     height: 100%;
     width: 100%;
+}
+
+/* Hero */
+.heroCont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../public/hero-photo.png) no-repeat;
+    aspect-ratio: 375 / 450;
+    position: relative;
+    background-position: bottom right 56%;
+    background-size: 200% 100%;
+    margin-bottom: 46px;
+}
+
+.heroCont::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 92px;
+    width: 100%;
+    background: url(../../public/halftone.png) no-repeat;
+    background-size: 200%;
+    background-position: bottom left;
+}
+
+.heroCont h1 {
+    font-family: var(--font-main);
+    letter-spacing: 0px;
+    color: #F8F8F2;
+    text-shadow: 2px 2px 0px #000000;
+    background: #C24868E6;
+    padding: 16.5px 32px;
+    font-size: 27px;
+    font-weight: 900;
+
+}
+
+/* Intro */
+.introCont {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    font-family: var(--font-main);
+    margin-bottom: 42px;
+}
+
+.introSubtitle {
+    letter-spacing: 0px;
+    color: #F8F8F2;
+    text-shadow: 2px 2px 0px #222222;
+    background: #9ECFC5;
+    display: inline-flex;
+    width: fit-content;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-weight: 900;
+    align-items: center;
+    padding: 6px 15px;
+    transform: rotate(356deg) translateX(-10px);
+}
+
+.introTitle {
+    font-size: 25px;
+    color: #C24868;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+
+.introCont p {
+    font-size: 20px;
+    line-height: calc(32 / 20);
 }
 
 @media (min-width: 40em) {
@@ -81,7 +162,24 @@
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .introCont {
+        max-width: 822px;
+        margin-inline: auto;
+    }
 }
 
 @media (min-width: 64em) {
+    /* Hero */
+    .heroCont {
+        aspect-ratio: 1440 / 650;
+        background-position: bottom;
+        background-size: cover;
+    }
+
+    .heroCont::after{
+        height: 176px;
+        bottom: -10px;
+        background-size: cover;
+    }
 }
