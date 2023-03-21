@@ -10,7 +10,11 @@ interface Props {
 }
 
 export default function Comic ({ comic }: Props) {
+    if(!comic) return null;
+    
     const { title, thumbnail, issueNumber, publishDate, creators } = comic;
+    
+    console.log(publishDate);
     
     return ( 
             <div className={styles.comicSlide} >
@@ -19,7 +23,7 @@ export default function Comic ({ comic }: Props) {
                     className={styles.comicImg}
                     alt={title}
                     src={thumbnail}
-                    blurDataURL={thumbnail}
+                    blurDataURL='blurDataURL'
                     placeholder='blur'
                     sizes="(min-width 64em) height={276} "
                     height={276}

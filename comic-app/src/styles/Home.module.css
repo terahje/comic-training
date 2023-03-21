@@ -1,0 +1,118 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: transparent linear-gradient(180deg, #000000B3 0%, #00000000 100%) 0% 0% no-repeat padding-box;
+    padding: 10px 20px;
+    font-family: var(--font-main);
+    font-weight: 600;
+}
+
+.logoCont img {
+    height: 75px;
+    width: 75px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.barsMobile {
+    height: 43px;
+    width: 55px;
+    background-color: transparent;
+    border: 2px solid #F8F8F2;
+    border-radius: 5px;
+}
+
+.boltCont > span {
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.desktopItems,
+.boltDesktop {
+    display: none;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 29px 20px 35px;
+    background: #222;
+    text-align: center;
+    align-items: center;
+    font-family: var(--font-main);
+    color: #fff;
+    gap: 16px;
+}
+
+.navItems {
+    display: flex;
+    gap: 4px;
+}
+
+.footerNav a {
+    color: #fff;
+}
+
+.footerLogo {
+    margin-bottom: 5px;
+}
+
+@media (min-width: 64em) {
+    /* header */
+    .header {
+        padding: 20px 60px;
+    }
+
+    .logoCont img {
+        height: unset;
+        width: unset;
+    }
+
+    .barsMobile {
+        display: none;
+    }
+
+    .boltDesktop {
+        display: flex;
+    }
+
+    .desktopItems {
+        display: flex;
+        gap: 30px;
+    }
+
+    .desktopItems a {
+        color: white;
+        text-decoration: unset;
+    }
+
+    .navbar {
+        gap: 30px;
+    }
+
+    .boltCont > span  {
+        font-weight: 300;
+    }
+
+    .boltCont .boltDesktop {
+        font-weight: 600;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 29px 20px 51px;
+    }
+}

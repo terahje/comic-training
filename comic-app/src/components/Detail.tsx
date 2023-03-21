@@ -10,12 +10,13 @@ type DetailProps = {
 }
 
 export default function Detail({ title, issueNumber = 0, date, creators }: DetailProps) {
+    
     return ( 
-        <div className={styles.contSection}>
-            <h3 className={styles.title}>{title}</h3>
-            <p className={styles.pTag}><strong>Issue: </strong>{issueNumber}</p>
-            {!!date && <li><strong>Pubulished: </strong><Moment format='LL'>{ date }</Moment></li>}
-            {creators && <li><strong>Creators: </strong>{ creators }</li>}
+        <div className={styles.contSection} data-testid='details'>
+            <h3 className={styles.title} data-testid='comic-title'>{title}</h3>
+            <p className={styles.pTag} data-testid='comic-issueNumber'><strong>Issue: </strong>{issueNumber}</p>
+            {<p data-testid='comic-publishDate'><strong>Published: </strong><Moment format='LL'>{ date }</Moment></p>}
+            {creators && <p data-testid='comic-creators'><strong>Creators: </strong>{ creators }</p>}
         </div>
      );
 }

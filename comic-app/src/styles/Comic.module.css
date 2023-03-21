@@ -182,4 +182,21 @@
         bottom: -10px;
         background-size: cover;
     }
+
+    /* Intro Cont */
+    .introSubtitle {
+        font-size: 18px;
+        padding: 9px 17px;;
+        margin-bottom: -15px;
+        z-index: -1;
+        transform: rotate(356deg) translateX(-50px);
+    }
+
+    .introTitle {
+        font-size: 49px;
+    }
+
+    .introCont {
+        padding: 0 60px;
+    }
 }

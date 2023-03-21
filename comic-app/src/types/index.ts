@@ -10,11 +10,7 @@ export interface FetchedResult {
 }
 
 export interface CreatorCall {
-	items?: {
-		resourceURI: string;
-		name: string;
-		role: string;
-	};
+	items: Creator[];
 }
 
 export interface Creator {
