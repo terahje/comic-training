@@ -6,7 +6,7 @@ export interface FetchedResult {
 	creators: CreatorCall;
 	issueNumber: number;
 	title: string;
-	modified: string;
+	dates: Date[];
 }
 
 export interface CreatorCall {
@@ -28,7 +28,6 @@ export interface ComicProps {
 	title: string,
 	thumbnail: string,
 	issueNumber: number,
-	publishDate: string,
+	dates: Date,
 	creators: Creator[],
 }
-
