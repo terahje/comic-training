@@ -1,0 +1,105 @@
+.favCont {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background: #222;
+	padding: 29px 20px 56px;
+	gap: 47px;
+	height: 100%;
+	position: relative;
+}
+
+.favComicList {
+	display: grid;
+	gap: 26px;
+	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.favorites h3 {
+	font-size: 25px;
+	letter-spacing: .25px;
+	line-height: calc(30 / 25);
+	font-family: var(--font-main);
+	font-weight: 900;
+	color: #fff;
+}
+
+.favSlide {
+	display: flex;
+	gap: 10px;
+}
+
+.contentSection {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	font-family: var(--font-display);
+	gap: 5px;
+}
+
+.contentSection h5 {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: calc(16 / 14);
+}
+
+.imgCont {
+	position: relative;
+}
+
+.removeButton {
+	position: absolute;
+	top: -17px;
+	left: -17px;
+	background: #F8F8F2 0% 0% no-repeat padding-box;
+	opacity: 0.8;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: unset;
+	font-size: 15px;
+}
+
+.closeButton {
+	position: absolute;
+	bottom: -20px;
+	left: -10px;
+	width: calc(100% + 20px);
+	height: 40px;
+	background: #C24868;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+	font-family: var(--font-main);
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+}
+
+@media (min-width: 64em) {
+	.favCont {
+		max-width: 265px;
+		background: #222;
+		padding: 29px 30px 40px;
+		gap: 36px;
+		margin-right: 60px;
+		position: relative;
+	}
+
+	.closeButton {
+		display: none;
+	}
+
+	.removeButton {
+		top: -6px;
+		left: -6px;
+		width: 12px;
+		height: 12px;
+		font-size: 8px;
+	}
+}
