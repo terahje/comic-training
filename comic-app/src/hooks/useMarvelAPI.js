@@ -21,7 +21,7 @@ function useMarvelAPI(url) {
     useEffect(() => {
         setTimeout(()=>{
             fetchData();
-        }, 1000)
+        })
     }, [])
 
     return {comics, error, loading}

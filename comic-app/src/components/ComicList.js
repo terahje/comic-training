@@ -7,7 +7,9 @@ import styles from '@/styles/Comic.module.css'
 import PacmanLoader from "react-spinners/PacmanLoader";
 
 
-const API_URL = 'http://gateway.marvel.com/v1/public/comics?ts=1&apikey=ff34e285bad35f7abc603c31db177f23&hash=17323b56c7cd1c765b981a2d95310893'
+const publicKey = process.env.NEXT_PUBLIC_MARVEL_KEY;
+
+export let API_URL = `https://gateway.marvel.com:443/v1/public/comics?limit=15&offset=0&apikey=${publicKey}`
 
 const slides = {
     display: 'grid',
