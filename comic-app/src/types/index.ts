@@ -10,7 +10,7 @@ export interface FetchedResult {
 	dates: Date[];
 }
 
-export type Date = {
+export interface Date {
 	type: string,
 	date: string,
 }
@@ -37,7 +37,7 @@ export interface ComicProps {
 	title: string,
 	thumbnail: string,
 	issueNumber: number,
-	dates: Date,
+	dates: Date[],
 	creators: Creator[],
 }
 
@@ -46,4 +46,6 @@ export interface Favorites {
 	title: string,
 	thumbnail: string,
 	issueNumber: number,
+	find(arg0: (favorite: any) => boolean): Favorites;
+	length: number;
 }

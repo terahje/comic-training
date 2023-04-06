@@ -56,8 +56,8 @@ export default function Home() {
 			initialRender.current = false;
 		}
 	}, [characterId, creatorId, offset]);
-
-	function updateFilter(event: any): void {
+	
+	function updateFilter(event: React.ChangeEvent<HTMLSelectElement>): void {
 		const target = event.target as HTMLSelectElement;
 		const id = target.value;
 		const name = target.name;

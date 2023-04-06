@@ -1,11 +1,26 @@
 import React from "react";
 import styles from '../styles/Comic.module.css'
 
-type DetailProps = {
-	title: string, 
+interface Date {
+	type: string,
+	date: string,
+}
+
+interface Creator {
+	name: string;
+	role: string;
+	resourceURI: string;
+};
+interface Character {
+	name: string;
+	resourceURI: string;
+};
+
+interface DetailProps {
+	title: string,
 	issueNumber: number,
-	dates: Date[];
-	creators: string;
+	dates: Date[],
+	creators: string,
 }
 
 export default function Detail({ title, issueNumber, dates, creators }: DetailProps) {

@@ -4,6 +4,10 @@
 	flex-direction: column;
 }
 
+.contSection p {
+	font-family: var(--font-display);
+}
+
 .comicSlide {
 	display: flex;
 	flex-direction: row-reverse;
@@ -50,8 +54,19 @@
 	border: 2px solid #F8F8F2;
 }
 
+
+.isFavFull,
+.isFavFull:hover,
+.isFavFull.selected {
+	background-color: #ccc;
+	border: 2px solid #ccc;
+	cursor: default;
+}
+
+
+
 .pTag {
-	font-size: 16px;
+	font-size: 1rem;
 	font-family: var(--font-display);
 	margin: 0;
 }
@@ -105,7 +120,7 @@
 	text-shadow: 2px 2px 0px #000000;
 	background: #C24868E6;
 	padding: 16.5px 32px;
-	font-size: 27px;
+	font-size: 1.6875rem;
 	font-weight: 900;
 
 }
@@ -127,7 +142,7 @@
 	display: inline-flex;
 	width: fit-content;
 	justify-content: flex-start;
-	font-size: 14px;
+	font-size: .875rem;
 	font-weight: 900;
 	align-items: center;
 	padding: 6px 15px;
@@ -135,14 +150,14 @@
 }
 
 .introTitle {
-	font-size: 25px;
+	font-size: 1.5625rem;
 	color: #C24868;
 	font-weight: 900;
 	margin-bottom: 16px;
 }
 
 .introCont p {
-	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: calc(32 / 20);
 }
 
@@ -207,12 +222,12 @@
 	}
 
 	.heroCont h1 {
-		font-size: 61px;
+		font-size: 3.8125rem;
 	}
 
 	/* Intro Cont */
 	.introSubtitle {
-		font-size: 18px;
+		font-size: 1.125rem;
 		padding: 9px 17px;
 		margin-bottom: -15px;
 		z-index: -1;
@@ -220,7 +235,7 @@
 	}
 
 	.introTitle {
-		font-size: 49px;
+		font-size: 3.0625rem;
 	}
 
 	.introCont {

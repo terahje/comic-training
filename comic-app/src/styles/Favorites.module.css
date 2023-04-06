@@ -16,7 +16,7 @@
 }
 
 .favorites h3 {
-	font-size: 25px;
+	font-size: 1.5625rem;
 	letter-spacing: .25px;
 	line-height: calc(30 / 25);
 	font-family: var(--font-main);
@@ -39,7 +39,7 @@
 
 .contentSection h5 {
 	font-weight: 700;
-	font-size: 14px;
+	font-size: .875rem;
 	line-height: calc(16 / 14);
 }
 
@@ -60,7 +60,7 @@
 	justify-content: center;
 	align-items: center;
 	border: unset;
-	font-size: 15px;
+	font-size: .9375rem;
 }
 
 .closeButton {
@@ -72,7 +72,7 @@
 	background: #C24868;
 	border: none;
 	color: #fff;
-	font-size: 14px;
+	font-size: .875rem;
 	font-family: var(--font-main);
 	font-weight: 700;
 	display: flex;
@@ -100,6 +100,6 @@
 		left: -6px;
 		width: 12px;
 		height: 12px;
-		font-size: 8px;
+		font-size: .5rem;
 	}
 }

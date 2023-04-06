@@ -58,7 +58,7 @@
 }
 
 .boltCont > span {
-	font-size: 18px;
+	font-size: 1.125rem;
 	color: #fff;
 	display: flex;
 	align-items: center;
@@ -118,7 +118,7 @@
 }
 
 .pagerCont span {
-	font-size: 18px;
+	font-size: 1.125rem;
 	font-family: var(--font-display);
 	color: #222;
 }

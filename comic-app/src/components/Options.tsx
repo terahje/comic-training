@@ -8,7 +8,7 @@ export default function Options({ updateFilter }: OptionsProps) {
 	return (
 		<div className={styles.optionsCont}>
 			<select name="characterFilter" id="characterFilter" onChange={updateFilter} className={styles.filterCont}>
-				<option >Character</option>
+				<option value="">Character</option>
 				<option value="1009368">Iron Man</option>
 				<option value="1009220">Captain America</option>
 				<option value="1009664">Thor</option>

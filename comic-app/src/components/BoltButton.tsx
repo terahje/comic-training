@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from '../styles/Comic.module.css';
-import { ComicProps } from "../types";
+import { ComicProps, Favorites } from "../types";
 
 import {
   faBoltLightning,
@@ -8,7 +8,7 @@ import {
 
 type buttonProps = {
 	comicProps: ComicProps;
-	isFavorite: ComicProps;
+	isFavorite: Favorites;
 	isFavoritesFull: boolean;
 	favorites: any;
 	setFavorites: any;
@@ -49,7 +49,7 @@ export default function BoltButton ({ comicProps, favorites, setFavorites, isFav
 	
 
 	return (
-		<button className={`${styles.button} ${isFavorite && styles.selected}`} onClick={!isFavorite ? addToFavorites : removeFromFavorites}>
+		<button className={`${styles.button} ${isFavorite && styles.selected} ${!isFavorite && isFavoritesFull && styles.isFavFull}`} onClick={!isFavorite ? addToFavorites : removeFromFavorites}>
 			<FontAwesomeIcon
 				icon={faBoltLightning}
 				style={{ fontSize: 16, color: "white" }}

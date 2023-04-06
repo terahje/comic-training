@@ -35,7 +35,7 @@ function useMarvelAPI(url: string): {loading: boolean, comics: ComicProps[], err
 				setTotal(json.data.total)
 				setLoading(false);
 			} catch (err) {
-				setError(error);
+				setError(err);
 				setLoading(false);
 				console.log("failed to fetch", err);
 			}

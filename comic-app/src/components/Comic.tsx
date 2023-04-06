@@ -6,19 +6,18 @@ import { ComicProps, Favorites } from '../types'
 
 interface Props {
 	comic: ComicProps;
-	favorites: string;
-	setFavorites: string;
+	favorites: Favorites;
+	setFavorites: Function;
 }
 
 export default function Comic ({ comic, favorites, setFavorites }: Props) {
 	if(!comic) return null;
 	
 	const { title, thumbnail, issueNumber, dates, creators } = comic;
-	
 
 	const isFavoritesFull: boolean = favorites.length >= 10;
-	const isFavorite: ComicProps = favorites.find(favorite => favorite.id === comic.id);
-	
+	const isFavorite: Favorites = favorites.find(favorite => favorite.id === comic.id);
+
 	return ( 
 			<div className={styles.comicSlide} >
 				<div className={styles.imgCont}>
@@ -40,7 +39,7 @@ export default function Comic ({ comic, favorites, setFavorites }: Props) {
 					isFavoritesFull={isFavoritesFull}
 				/>
 				</div>
-				<Detail 
+				<Detail
 					title={comic.title}
 					issueNumber={+issueNumber}
 					dates={dates}

@@ -15,7 +15,7 @@
 }
 
 .mobileFilterInner button {
-	font-size: 14px;
+	font-size: .875rem;
 	font-weight: 600;
 	color: #fff;
 	display: flex;
@@ -38,7 +38,7 @@
 	background: transparent;
 	color: #fff;
 	font-family: var(--font-display);
-	font-size: 16px;
+	font-size: 1rem;
 	padding: 5px 10px;
 	width: 100%;
 }
@@ -83,7 +83,7 @@
 	}
 	
 	.desktopFilter span {
-		font-size: 14px;
+		font-size: .875rem;
 		font-weight: 600;
 		color: #fff;
 		font-family: var(--font-main);
@@ -96,7 +96,7 @@
 		background: transparent;
 		color: #fff;
 		font-family: var(--font-display);
-		font-size: 16px;
+		font-size: 1rem;
 		padding: 5px 10px;
 		min-width: 245px;
 	}

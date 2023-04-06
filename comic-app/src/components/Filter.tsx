@@ -8,9 +8,8 @@ import { Favorites } from '../types';
 
 interface FilterProps {
 	updateFilter(event: React.ChangeEvent): void;
-	handleCloseButtonClick: React.MouseEventHandler;
-	favorites: Favorites;
-	setFavorites: Favorites;
+	favorites: Favorites[];
+	setFavorites: Function;
 }
 
 export const Filter = ({ updateFilter, favorites, setFavorites} : FilterProps) => {
